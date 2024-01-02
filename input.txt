@@ -1,0 +1,36 @@
+(a) Define following terms: (i) Big O Notation, (ii) Big Theta Notation, (iii) Big Omega Notation. 03 
+(b) Perform Bucket sort for following sequence: 30, 12, 22, 66, 48, 27, 35, 43, 47, 41. 04 
+(c) Explain the bubble sort algorithm and derive its best case, worst case, and average case time complexity. 07 
+(a) Define Algorithms and characteristics of algorithms. 03 
+(b) What is a recurrence? Solve recurrence equation for T (n) =T (n-1) + 1 using substitution method. 04 
+(c) Discuss Binary search algorithm, also write and solve its recurrence relation. 07 
+(c) Explain Merge Sort algorithm with suitable example. 07 
+(a) Explain principle of optimality with suitable example. 03 
+(b) Explain advantages and disadvantages of dynamic programming. 04 
+(c) Given the denominations: d1=1, d2=4, d3=6. Calculate for making change of Rs. 8 using dynamic programming. 07 
+(a) Explain Weighted Graph, Undirected Graph, Directed Graph. 03 
+(b) Discuss advantages and disadvantages of greedy algorithm. 04 
+(c) Consider weights w=(3,4,6,5) and profit v=(2,3,1,4) and Knapsack capacity W=8. Find the maximum profit using dynamic approach. 07 
+(a) Find an optimal Huffman code for the following set of frequency. a : 40, b: 20, c: 15, d: 30, e: 10. 03 
+(b) Explain depth first traversal using suitable example. 04 
+(c) Draw the minimum spanning tree correspond to following graph using Prim’s algorithm and find the MST weight: 07 
+(a) Differentiate between Kruskal’s algorithm and Prim’s algorithm for finding MST. 03 
+(b) Explain the need of topological Sort with example. 04 
+(c) Draw the minimum spanning tree correspond to following graph using Kruskal’s algorithm and find weight of MST: 07 (a) Explain Spurious hits with an example. 03 
+(b) Write the pseudocode for Naïve String-Matching Algorithm. 04 
+(c) What is state space tree. How do you solve the Eight queens problem using backtracking with the help of state space tree. 07 
+(a) Explain polynomial time reduction. 03 
+(b) Differentiate between Backtracking and Branch-and-Bound algorithms. 04 
+(c) Define P, NP, NP complete and NP-Hard problems. Give examples of each 07 
+Introduction to Data Structures
+Arrays Linked_Lists Trees Stacks Queues
+Algorithms and Complexity
+Sorting Searching Recursion Divide_and_Conquer
+Object-Oriented Programming
+Classes Objects Inheritance Polymorphism Encapsulation Abstraction
+Database Management Systems
+SQL RDBMS NoSQL ACID
+Operating Systems
+Processes Threads Scheduling Memory_Management File Systems I/O_Device_Management
+Computer Networks
+TCP/IP OSI_Model Routing Switching Network_Security
