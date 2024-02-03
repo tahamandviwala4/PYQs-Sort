@@ -1,50 +1,41 @@
--  Define following terms: (i) Big O Notation, (ii) Big Theta Notation, (iii) Big Omega Notation. (S23-3)
--  Perform Bucket sort for following sequence: 30, 12, 22, 66, 48, 27, 35, 43, 47, 41. (S23-4)
--  Explain the bubble sort algorithm and derive its best case, worst case, and average case time complexity. (S23-7)
--  Define Algorithms and characteristics of algorithms. (S23-3)
--  What is a recurrence? Solve recurrence equation for T (n) =T (n-1) + 1 using substitution method. (S23-4)
--  Discuss Binary search algorithm, also write and solve its recurrence relation. (S23-7)
--  Explain Merge Sort algorithm with suitable example. (S23-7)
--  Explain principle of optimality with suitable example. (S23-3)
--  Explain advantages and disadvantages of dynamic programming. (S23-4)
--  Given the denominations: d1=1, d2=4, d3=6. Calculate for making change of Rs. 8 using dynamic programming. (S23-7)
--  Explain Weighted Graph, Undirected Graph, Directed Graph. (S23-3)
--  Discuss advantages and disadvantages of greedy algorithm. (S23-4)
--  Consider weights w=(3,4,6,5) and profit v=(2,3,1,4) and Knapsack capacity W=8. Find the maximum profit using dynamic approach. (S23-7)
--  Find an optimal Huffman code for the following set of frequency. a : 40, b: 20, c: 15, d: 30, e: 10. (S23-3)
--  Explain depth first traversal using suitable example. (S23-4)
--  Draw the minimum spanning tree correspond to following graph using Prim’s algorithm and find the MST weight: (S23-7)
--  Differentiate between Kruskal’s algorithm and Prim’s algorithm for finding MST. (S23-3)
--  Explain the need of topological Sort with example. (S23-4)
--  Draw the minimum spanning tree correspond to following graph using Kruskal’s algorithm and find weight of MST: 07 (a) Explain Spurious hits with an example. (S23-3)
--  Write the pseudocode for Naïve String-Matching Algorithm. (S23-4)
--  What is state space tree. How do you solve the Eight queens problem using backtracking with the help of state space tree. (S23-7)
--  Explain polynomial time reduction. (S23-3)
--  Differentiate between Backtracking and Branch-and-Bound algorithms. (S23-4)
--  Define P, NP, NP complete and NP-Hard problems. Give examples of each (S23-7)
+Input Successful
+Input quesiton
+## Ch-1 Java Networking
+- Explain the usage of InetAddress class. (3-W21)
 
+## Ch-2 JDBC Programming
+- Explain the use of PreparedStatement and CallableStatement with example. (4-W21)
+- Write a JDBC program for banking application in which consider bank table with attributes AccountNo, CustomerName, Phone and Address, and perform followings: 1. Insert two records using prepared statement. 2. Display all the records. (7-W21)
+- Discuss the use of execute(), executeUpdate() and executeQuery() methods. (3-W21)
+- What is HQL? Write difference between HQL and SQL. (4-W21)
 
-Introduction to Data Structures
-5
-Arrays Linked_Lists Trees Stacks Queues 
+## Ch-3 Servlet API and Overview
+- Differentiate HTTP Get and Post methods. (3-W21)
+- Differentiate ServletConfig and ServletContext objects. (4-W21)
+- Write a servlet code which reads the student details from web page and stores it in database. (7-W21)
+- What is Filter? List the applications of filter. (3-W21)
+- Discuss Servlet life cycle methods. Explain role of web container. (4-W21)
+- What is Request Dispatcher? What is the difference between RequestDispatcher’s forward() and include() method? Explain it in detail with program. (7-W21)
 
-Algorithms and Complexity
-4
-Sorting Searching Recursion Divide_and_Conquer 
+## Ch-4 Java Server Pages
+- Explain JSP page directives with example. (7-W21)
+- Explain any four implicit objects of JSP. (4-W21)
+- What is difference between include directive and jsp:include action tag? (3-W21)
+- Write a JSP application for login module with reset password feature using database connectivity. (7-W21)
 
-Object-Oriented Programming
-6
-Classes Objects Inheritance Polymorphism Encapsulation Abstraction 
+## Ch-5 Java Server Faces
+- Explain the JSF request processing life cycle. (7-W21)
+- What is the JSF facelets? Explain any two facelets tags. (3-W21)
+- List the JSF standard converter tags and explain any three in detail. (4-W21)
 
-Database Management Systems
-4
-SQL RDBMS NoSQL ACID 
+## Ch-6 Hibernate
+- Explain Hibernate Architecture. (7-W21)
+- What is ORM? Explain object/relational mappings in hibernate. (4-W21)
 
-Operating Systems
-7
-Processes Threads Scheduling Memory_Management File Systems I/O_Device_Management 
+## Ch-7 Java Web Framework : Spring MVC
+- Explain the features of Spring web MVC. (3-W21)
 
-Computer Networks
-5
-TCP/IP OSI_Model Routing Switching Network_Security 
-
+## Extras
+- Write a program in which client sends string from its standard input to the server. The server reads the string, converts the string into upper case and sends back to client. Use connection-oriented communication. (7-W21)
+- Explain any four JSTL core tags. (4-W21)
+- What is dependency injection? Explain in detail. (3-W21)

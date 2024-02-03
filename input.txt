@@ -1,36 +1,39 @@
-(a) Define following terms: (i) Big O Notation, (ii) Big Theta Notation, (iii) Big Omega Notation. 03 
-(b) Perform Bucket sort for following sequence: 30, 12, 22, 66, 48, 27, 35, 43, 47, 41. 04 
-(c) Explain the bubble sort algorithm and derive its best case, worst case, and average case time complexity. 07 
-(a) Define Algorithms and characteristics of algorithms. 03 
-(b) What is a recurrence? Solve recurrence equation for T (n) =T (n-1) + 1 using substitution method. 04 
-(c) Discuss Binary search algorithm, also write and solve its recurrence relation. 07 
-(c) Explain Merge Sort algorithm with suitable example. 07 
-(a) Explain principle of optimality with suitable example. 03 
-(b) Explain advantages and disadvantages of dynamic programming. 04 
-(c) Given the denominations: d1=1, d2=4, d3=6. Calculate for making change of Rs. 8 using dynamic programming. 07 
-(a) Explain Weighted Graph, Undirected Graph, Directed Graph. 03 
-(b) Discuss advantages and disadvantages of greedy algorithm. 04 
-(c) Consider weights w=(3,4,6,5) and profit v=(2,3,1,4) and Knapsack capacity W=8. Find the maximum profit using dynamic approach. 07 
-(a) Find an optimal Huffman code for the following set of frequency. a : 40, b: 20, c: 15, d: 30, e: 10. 03 
-(b) Explain depth first traversal using suitable example. 04 
-(c) Draw the minimum spanning tree correspond to following graph using Prim’s algorithm and find the MST weight: 07 
-(a) Differentiate between Kruskal’s algorithm and Prim’s algorithm for finding MST. 03 
-(b) Explain the need of topological Sort with example. 04 
-(c) Draw the minimum spanning tree correspond to following graph using Kruskal’s algorithm and find weight of MST: 07 (a) Explain Spurious hits with an example. 03 
-(b) Write the pseudocode for Naïve String-Matching Algorithm. 04 
-(c) What is state space tree. How do you solve the Eight queens problem using backtracking with the help of state space tree. 07 
-(a) Explain polynomial time reduction. 03 
-(b) Differentiate between Backtracking and Branch-and-Bound algorithms. 04 
-(c) Define P, NP, NP complete and NP-Hard problems. Give examples of each 07 
-Introduction to Data Structures
-Arrays Linked_Lists Trees Stacks Queues
-Algorithms and Complexity
-Sorting Searching Recursion Divide_and_Conquer
-Object-Oriented Programming
-Classes Objects Inheritance Polymorphism Encapsulation Abstraction
-Database Management Systems
-SQL RDBMS NoSQL ACID
-Operating Systems
-Processes Threads Scheduling Memory_Management File Systems I/O_Device_Management
-Computer Networks
-TCP/IP OSI_Model Routing Switching Network_Security
+Java Networking
+protocol IP domain DNS port URL socket Socket InetAddress
+JDBC Programming
+ResultSetMetadata PreparedStatement CallableStatement SQL JDBC executeUpdate
+Servlet API and Overview
+Servlet servlet cookie session filter Filter RequestDispatcher HTTP
+Java Server Pages
+JSP useBean tracking jsp
+Java Server Faces
+JSF EL
+Hibernate
+hibernate Hibernate
+Java Web Framework : Spring MVC
+Spring MVC spring
+(a) Explain the usage of InetAddress class. 03 
+(b) Explain the use of PreparedStatement and CallableStatement with example. 04 
+(c) Explain JSP page directives with example. 07 
+(a) Differentiate HTTP Get and Post methods. 03 
+(b) Explain any four implicit objects of JSP. 04 
+(c) Write a program in which client sends string from its standard input to the server. The server reads the string, converts the string into upper case and sends back to client. Use connection-oriented communication. 07 
+(c) Write a JDBC program for banking application in which consider bank table with attributes AccountNo, CustomerName, Phone and Address, and perform followings: 1. Insert two records using prepared statement. 2. Display all the records. 07 
+(a) Discuss the use of execute(), executeUpdate() and executeQuery() methods. 03 
+(b) Differentiate ServletConfig and ServletContext objects. 04 
+(c) Write a servlet code which reads the student details from web page and stores it in database. 07 
+(a) What is Filter? List the applications of filter. 03 
+(b) Discuss Servlet life cycle methods. Explain role of web container. 04 
+(c) What is Request Dispatcher? What is the difference between RequestDispatcher’s forward() and include() method? Explain it in detail with program. 07 
+(a) What is difference between include directive and jsp:include action tag? 03 
+(b) Explain any four JSTL core tags. 04 
+(c) Explain the JSF request processing life cycle. 07 
+(a) What is the JSF facelets? Explain any two facelets tags. 03 
+(b) List the JSF standard converter tags and explain any three in detail. 04 
+(c) Write a JSP application for login module with reset password feature using database connectivity. 07 
+(a) What is dependency injection? Explain in detail. 03 
+(b) What is HQL? Write difference between HQL and SQL. 04 
+(c) Explain Hibernate Architecture. 07 
+(a) Explain the features of Spring web MVC. 03 
+(b) What is ORM? Explain object/relational mappings in hibernate. 04 
+(c) Explain architecture of Spring MVC Framework. 07 

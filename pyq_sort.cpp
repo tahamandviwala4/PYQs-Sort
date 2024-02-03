@@ -4,7 +4,7 @@
 #include <sstream>
 
 using namespace std;
-
+// Chapter class
 class chapter
 {
 private:
@@ -13,6 +13,7 @@ public:
 	int no_of_keywords;
 	string name;
 	vector<string> keywords;
+	vector<int> questions;
 
 	// Constructor
 	chapter(){};
@@ -41,6 +42,7 @@ public:
 				word_seperater(templine, chapters[i].keywords);
 			}
 		}
+		cout << "Input Successful" << endl;
 	}
 
 	// Function to count no. of keywords
@@ -73,6 +75,7 @@ public:
 	// Function to print the values stored in chapter class
 	void print_chapters(int n, chapter *chapters)
 	{
+		cout << "Entered Print Chapter function" << endl;
 		for (int i = 0; i < n; i++)
 		{
 			cout << chapters[i].name << endl;
@@ -87,13 +90,14 @@ public:
 	}
 };
 
+// Question class
 class questions : public chapter
 {
 private:
 public:
 	int marks;
-	// string paper_identifier;
 	string question_string;
+	// string paper_identifier;
 
 	// Constructor
 	questions(){};
@@ -118,6 +122,7 @@ public:
 			arr[i].question_string.erase(arr[i].question_string.length() - 3, arr[i].question_string.length());
 			arr[i].question_string.erase(0, 3);
 		}
+		cout << "Input quesiton" << endl;
 		return arr;
 	}
 
@@ -132,6 +137,64 @@ public:
 	}
 };
 
+// Function to print elements of vector
+void print_vector(vector<int> extra_question)
+{
+	for (int i = 0; i < extra_question.size(); i++)
+	{
+		cout << extra_question[i] << endl;
+	}
+}
+
+// Function to store indexes of question array if the keyword matches
+void question_identifier(questions *qarr, int question_count, chapter *chapter_array, int chapter_count, vector<int> &extra_questions)
+{
+	for (int i = 0; i < question_count; i++)
+	{
+		bool found = false;
+		for (int j = 0; j < chapter_count; j++)
+		{
+			for (int k = 0; k < chapter_array[j].no_of_keywords; k++)
+			{
+				int index = qarr[i].question_string.find(chapter_array[j].keywords[k]);
+				if (index != -1 && !found)
+				{
+					chapter_array[j].questions.push_back(i);
+					found = true;
+					// cout << "question no " << i + 1 << " of chapter " << j + 1 << " with keyword : " << chapter_array[j].keywords[k] << endl;
+				}
+				// cout << chapter_array[j].keywords[k] << endl;
+			}
+		}
+		if (!found)
+		{
+			extra_questions.push_back(i);
+			// cout << "question not found" << endl;
+		}
+	}
+}
+
+// Function to print questions chapter wise
+void print_sorted_pyq(questions *qarr, int question_count, chapter *chapter_array, int chapter_count, vector<int> &extra_questions, string identifier)
+{
+	question_identifier(qarr, question_count, chapter_array, chapter_count, extra_questions);
+	for (int i = 0; i < chapter_count; i++)
+	{
+		cout << "## Ch-" << i + 1 << " " << chapter_array[i].name << endl;
+		for (int j = 0; j < chapter_array[i].questions.size(); j++)
+		{
+			cout << "-" << qarr[chapter_array[i].questions[j]].question_string << "(" << qarr[chapter_array[i].questions[j]].marks << "-" << identifier
+				 << ")" << endl;
+		}
+		cout << endl;
+	}
+	cout << "## Extras" << endl;
+	for (int i = 0; i < extra_questions.size(); i++)
+	{
+		cout << "-" << qarr[extra_questions[i]].question_string << "(" << qarr[extra_questions[i]].marks << "-" << identifier
+			 << ")" << endl;
+	}
+}
 int main()
 {
 #ifndef ONLINE_JUDGE
@@ -139,15 +202,17 @@ int main()
 	freopen("output.txt", "w", stdout);
 #endif
 	// Variable Declaration
-	int questions_count = 24, no_of_chapters = 6;
-	questions arr[30];
-	chapter chapter[no_of_chapters];
+	int questions_count = 24, no_of_chapters = 7;
+	questions questions[30];
+	chapter chapter[15];
+	vector<int> extra_questions;
 
-	arr[0].input_questions(questions_count, arr);
-	arr[0].print_questions(questions_count, arr);
-	cout << "\n"
-		 << endl;
+	// Functions calls
 	chapter[0].input_chapters(no_of_chapters, chapter);
-	chapter[0].print_chapters(no_of_chapters, chapter);
+	questions[0].input_questions(questions_count, questions);
+	// chapter[0].print_chapters(no_of_chapters, chapter);
+	// questions[0].print_questions(questions_count, questions);
+
+	print_sorted_pyq(questions, questions_count, chapter, no_of_chapters, extra_questions, "W21");
 	return 0;
 }
