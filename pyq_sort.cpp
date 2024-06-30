@@ -114,7 +114,7 @@ public:
 	{
 		string s;
 		getline(cin, s);
-
+		// cout << s << endl;
 		string subs;
 		int start_position = 0, end_position = 0, j = 0;
 
@@ -123,25 +123,37 @@ public:
 			if (s[i + 1] == '(')
 			{
 				end_position = i;
+				// cout << end_position << endl;
 				if (j > 0)
 				{
 					subs = s.substr(start_position + 1, (end_position - start_position - 1));
+					// cout << "exectuted1" << endl;
+					// cout << subs << endl;
 				}
 				else
 				{
+
 					subs = s.substr(start_position, (end_position - start_position));
+					// cout << "executed2" << endl;
+					// cout << subs << endl;
 				}
 
 				start_position = end_position;
-				cout << "executed1" << endl;
+				// cout << subs << endl;
 			}
 			// If it is last question
 			else if (j > 23 && i == s.length())
 			{
 				end_position = s.length();
-				subs = s.substr(start_position, end_position);
-				cout << "executed1" << endl;
+				subs = s.substr(start_position + 1, end_position);
+				// cout << subs << endl;
 			}
+			else
+			{
+				// cout << "none" << endl;
+				continue;
+			}
+
 			// Triming strings
 			for (int k = 5; k < subs.length(); k++)
 			{
@@ -155,17 +167,19 @@ public:
 					subs.erase(k, subs.length());
 				}
 			}
-			cout << subs << endl;
 
 			// Store question string into question array
 			arr[j].question_string = subs;
+			// cout << subs << endl;
 
 			// Store marks in to array of class questions
 			arr[j].marks = arr[j].question_string[arr[j].question_string.length() - 1] - '0';
+			// cout << arr[j].marks << " marks stored" << endl;
 
 			// Formatting string
 			arr[j].question_string.erase(arr[j].question_string.length() - 3, arr[j].question_string.length()); // Removing marks from end
-			arr[j].question_string.erase(0, 3);																	// Removing "(a)"
+			// Removing "(a)"
+			arr[j].question_string.erase(0, 3);
 			j++;
 		}
 
@@ -256,9 +270,10 @@ int main()
 
 	// Functions calls
 	// chapter[0].input_chapters(no_of_chapters, chapter);
-	questions[0].input_questions(questions_count, questions);
 	// chapter[0].print_chapters(no_of_chapters, chapter);
-	// questions[0].print_questions(questions_count, questions);
+
+	questions[0].input_questions(questions_count, questions);
+	questions[0].print_questions(questions_count, questions);
 
 	// print_sorted_pyq(questions, questions_count, chapter, no_of_chapters, extra_questions, "S22");
 	return 0;
