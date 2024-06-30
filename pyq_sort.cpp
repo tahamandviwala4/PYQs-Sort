@@ -112,16 +112,63 @@ public:
 	// Function to take input questions
 	questions *input_questions(int no_of_questions, questions *arr)
 	{
-		for (int i = 0; i < no_of_questions; i++)
+		string s;
+		getline(cin, s);
+
+		string subs;
+		int start_position = 0, end_position = 0, j = 0;
+
+		for (int i = 0; i <= s.length(); i++)
 		{
-			// Store questions into the array of class questions
-			getline(cin, arr[i].question_string);
+			if (s[i + 1] == '(')
+			{
+				end_position = i;
+				if (j > 0)
+				{
+					subs = s.substr(start_position + 1, (end_position - start_position - 1));
+				}
+				else
+				{
+					subs = s.substr(start_position, (end_position - start_position));
+				}
+
+				start_position = end_position;
+				cout << "executed1" << endl;
+			}
+			// If it is last question
+			else if (j > 23 && i == s.length())
+			{
+				end_position = s.length();
+				subs = s.substr(start_position, end_position);
+				cout << "executed1" << endl;
+			}
+			// Triming strings
+			for (int k = 5; k < subs.length(); k++)
+			{
+				// Trim end for question containing OR at end
+				if (subs[k + 1] == 'O' && subs[k + 2] == 'R')
+				{
+					subs.erase(k, subs.length());
+				}
+				else if (subs[k + 1] == 'Q' && subs[k + 2] == '.')
+				{
+					subs.erase(k, subs.length());
+				}
+			}
+			cout << subs << endl;
+
+			// Store question string into question array
+			arr[j].question_string = subs;
+
 			// Store marks in to array of class questions
-			arr[i].marks = arr[i].question_string[arr[i].question_string.length() - 2] - '0';
+			arr[j].marks = arr[j].question_string[arr[j].question_string.length() - 1] - '0';
+
 			// Formatting string
-			arr[i].question_string.erase(arr[i].question_string.length() - 3, arr[i].question_string.length());
-			arr[i].question_string.erase(0, 3);
+			arr[j].question_string.erase(arr[j].question_string.length() - 3, arr[j].question_string.length()); // Removing marks from end
+			arr[j].question_string.erase(0, 3);																	// Removing "(a)"
+			j++;
 		}
+
 		cout << "Input quesiton" << endl;
 		return arr;
 	}
@@ -129,10 +176,10 @@ public:
 	// Function to print questions
 	void print_questions(int no_of_questions, questions *arr)
 	{
-		string identifier = "S23";
+		string identifier = "S22";
 		for (int i = 0; i < no_of_questions; i++)
 		{
-			cout << "- " << arr[i].question_string << "(" << identifier << "-" << arr[i].marks << ")" << endl;
+			cout << "-" << arr[i].question_string << "(" << arr[i].marks << "-" << identifier << ")" << endl;
 		}
 	}
 };
@@ -202,17 +249,17 @@ int main()
 	freopen("output.txt", "w", stdout);
 #endif
 	// Variable Declaration
-	int questions_count = 24, no_of_chapters = 7;
+	int questions_count = 25, no_of_chapters = 7;
 	questions questions[30];
 	chapter chapter[15];
 	vector<int> extra_questions;
 
 	// Functions calls
-	chapter[0].input_chapters(no_of_chapters, chapter);
+	// chapter[0].input_chapters(no_of_chapters, chapter);
 	questions[0].input_questions(questions_count, questions);
 	// chapter[0].print_chapters(no_of_chapters, chapter);
 	// questions[0].print_questions(questions_count, questions);
 
-	print_sorted_pyq(questions, questions_count, chapter, no_of_chapters, extra_questions, "W21");
+	// print_sorted_pyq(questions, questions_count, chapter, no_of_chapters, extra_questions, "S22");
 	return 0;
 }
