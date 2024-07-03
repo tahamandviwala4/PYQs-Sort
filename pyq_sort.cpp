@@ -16,7 +16,7 @@ public:
 	vector<int> questions;
 
 	// Constructor
-	chapter(){};
+	chapter() {};
 	chapter(int chapter_number, string name)
 	{
 		this->chapter_number = chapter_number;
@@ -42,7 +42,7 @@ public:
 				word_seperater(templine, chapters[i].keywords);
 			}
 		}
-		cout << "Input Successful" << endl;
+		cout << "Input Chapters Successful" << endl;
 	}
 
 	// Function to count no. of keywords
@@ -100,7 +100,7 @@ public:
 	// string paper_identifier;
 
 	// Constructor
-	questions(){};
+	questions() {};
 	questions(string question_string, int chapter, int marks)
 	{
 		this->question_string = question_string;
@@ -183,7 +183,7 @@ public:
 			j++;
 		}
 
-		cout << "Input quesiton" << endl;
+		cout << "Input Quesitons Successful" << endl;
 		return arr;
 	}
 
@@ -263,18 +263,19 @@ int main()
 	freopen("output.txt", "w", stdout);
 #endif
 	// Variable Declaration
-	int questions_count = 25, no_of_chapters = 7;
+	int questions_count = 25, no_of_chapters = 9;
 	questions questions[30];
 	chapter chapter[15];
 	vector<int> extra_questions;
 
 	// Functions calls
-	// chapter[0].input_chapters(no_of_chapters, chapter);
+	chapter[0].input_chapters(no_of_chapters, chapter);
 	// chapter[0].print_chapters(no_of_chapters, chapter);
 
 	questions[0].input_questions(questions_count, questions);
-	questions[0].print_questions(questions_count, questions);
+	// questions[0].print_questions(questions_count, questions);
 
 	// print_sorted_pyq(questions, questions_count, chapter, no_of_chapters, extra_questions, "S22");
+
 	return 0;
 }
